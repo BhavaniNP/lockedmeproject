@@ -70,7 +70,7 @@ public class switchcases {
 			try {
 				choice = Integer.parseInt(scan.nextLine());
 			} catch (NumberFormatException e) {
-				System.out.println("\nInvalid Input \nPlease select options between:(1-3)\n");
+				System.out.println("Oops! option not found.");
 				mainMenu();
 			}
 
@@ -98,17 +98,17 @@ public class switchcases {
 
 			case 3: 
 					System.out.println("\n Are you sure you want to exit ? ");
-					System.out.println("  (Y) ==> Yes    (N) ==> No        ");
-					decision =  scan.nextLine().toUpperCase().charAt(0);
-					if(decision == 'Y') {
+					System.out.println("  (y) ==> yes    (n) ==> no        ");
+					decision =  scan.nextLine().charAt(0);
+					if(decision == 'y') {
 						System.out.println("\n");
 						exitScreen();
 						System.exit(1);
-					}else if(decision == 'N') {
+					}else if(decision == 'n') {
 						System.out.println("\n");
 						mainMenu();
 					}else {
-						System.out.println("\nInvalid Input \nValid Inputs :(Y/N)\n");
+						System.out.println("\nInvalid Input \nValid Inputs :(y/n)\n");
 						mainMenu();
 					}
 
